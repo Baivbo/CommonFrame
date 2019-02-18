@@ -1,0 +1,48 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <!--导航栏颜色-->
+        <item name="colorPrimary">@color/toolbar_color</item>
+        <!--状态栏颜色-->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!--控件选中后颜色-->
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--隐藏系统导航栏-->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!--沉浸式状态栏-->
+        <item name="android:windowTranslucentStatus">true</item>
+        <!--全屏显示-->
+        <item name="android:windowFullscreen">true</item>
+        <!--虚拟导航键的颜色  AP1-21以上目前最低版本为19-->
+        <item name="android:navigationBarColor">@color/yellow</item>
+        <!--自定义Activity动画-->
+        <item name="android:windowAnimationStyle">@style/ActivityInOutAnimation</item>
+    </style>
+
+
+    <!--设置Activity启动退出动画-->
+    <style name="ActivityInOutAnimation" parent="android:Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/aitivity_open</item>
+        <!--<item name="android:activityCloseExitAnimation">@aview_closelose</item>-->
+    </style>
+
+    <style name="BaseDialog" parent="Animation.AppCompat.Dialog">
+        <item name="android:windowEnterAnimation">@anim/view_in</item>
+        <item name="android:windowExitAnimation">@anim/view_out</item>
+        <item name="android:windowBackground">@color/transparent</item><!--背景透明-->
+    </style>
+    
+    <style name="OverflowMenuStyle" parent="@style/Widget.AppCompat.PopupMenu.Overflow">
+        <!-- 是否覆盖锚点，默认为true，即盖住Toolbar -->
+        <item name="overlapAnchor">false</item>
+        <!-- 弹出层背景颜色 -->
+        <item name="android:popupBackground">@color/white</item>
+        <!-- 弹出层垂直方向上的偏移，即在竖直方向上距离Toolbar的距离，值为负则会盖住Toolbar -->
+        <item name="android:dropDownVerticalOffset">5dp</item>
+        <!-- 弹出层水平方向上的偏移，即距离屏幕左边的距离，负值会导致右边出现空隙 -->
+        <item name="android:dropDownHorizontalOffset">0dp</item>
+    </style>
+</resources>
